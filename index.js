@@ -22,7 +22,7 @@ window.onload = (event) =>
 				if( start.search( value.toLowerCase() ) != -1 )
 				{
 					// todo: sort by name
-					// objects.push(itm);
+					console.log( itm );
 				}
 			}
 		}
