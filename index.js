@@ -1,6 +1,9 @@
 // util
-GetFirstFromClassName = (cl) => document.getElementsByClassName(cl)[0];
-function RunSearchWithQuery( search )
+
+(function(){
+
+let GetFirstFromClassName = (cl) => document.getElementsByClassName(cl)[0];
+let RunSearchWithQuery = function( search )
 {
 	let ret = [];
 	
@@ -9,8 +12,7 @@ function RunSearchWithQuery( search )
 		let n = ITEMS[ item ].name;
 		if( n )
 		{
-			let name = n.toLowerCase();
-			if( n.search( search.toLowerCase() ) != -1 && ret.length < 10 )
+			if( n.toLowerCase().includes( search.toLowerCase() ) && ret.length < 10 )
 			{
 				ret.push( ITEMS[ item ] );
 			}
@@ -20,7 +22,7 @@ function RunSearchWithQuery( search )
 	return ret;
 }
 
-function HandleOnHover( main, item )
+let HandleOnHover = function( main, item )
 {
 	return (event) =>
 	{
@@ -29,7 +31,7 @@ function HandleOnHover( main, item )
 	};
 }
 
-function HandleOnClickForItem( main, item )
+let HandleOnClickForItem = function( main, item )
 {
 	return (event) =>
 	{
@@ -82,3 +84,4 @@ window.onload = (event) =>
 		}
 	});
 };
+})();
