@@ -108,7 +108,7 @@ let ITEMS = [
 		let tr = TORMENTS[t];
 		ITEMS.push( {
 			"name": `Tormented ${t}`, "icon": `icons/${tr.img}.png`, "slot": 1,
-			"obtained": [ `Completing a ${tr.scroll} Challenge Scroll` ],
+			"obtained": [ `Rare chance upon completing a ${tr.scroll} Challenge Scroll` ],
 			"stats": "Varies between weapons",
 			"drop": [ "Scroll Suffixes" ],
 			"features": { "Ability Charge": "Charge up your RMB ability by shooting enemies." },
